@@ -23,6 +23,8 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body {
@@ -30,6 +32,7 @@ body {
     font-family: var(--font-primary);
     color: var(--text-muted);
     overflow-x: hidden;
+    width: 100%;
     position: relative;
     line-height: 1.6;
 }
@@ -73,6 +76,8 @@ body {
 .page-wrapper {
     position: relative;
     z-index: 1;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .section-container {
@@ -897,7 +902,17 @@ body {
     }
 
     .mockup-wrapper {
-        padding: 20px 0;
+        padding: 20px 0 40px; /* Extra bottom padding to prevent overlap with the marquee */
+    }
+
+    .phone-frame {
+        width: 240px;
+        height: 480px;
+        border-width: 8px;
+    }
+
+    .floating-widget {
+        display: none; /* Hide floating widgets to prevent horizontal offset/cut-off on mobile */
     }
 }
 
@@ -924,20 +939,6 @@ body {
 
     .section-title {
         font-size: 26px;
-    }
-
-    .phone-frame {
-        width: 240px;
-        height: 480px;
-        border-width: 8px;
-    }
-
-    .floating-widget {
-        display: none; /* Hide floating widgets to prevent horizontal layout shift and overlap */
-    }
-
-    .mockup-wrapper {
-        padding: 10px 0 30px; /* Spacing below mockup to prevent overlapping marquee below */
     }
 
     .cta-panel {
